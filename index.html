@@ -43,8 +43,11 @@
         <div class="eyebrow">NOTRE COMMUNAUTÉ</div>
         <h1>Akieni Dev,<br><span>plus qu’une formation, une communauté.</span></h1>
         <p class="lead">Rejoins Akieni Dev et avance avec une communauté passionnée, bienveillante et tournée vers l’excellence.</p>
-        <a class="btn" href="https://discord.gg/QXBsK5zw" target="_blank" rel="noopener">Rejoindre Discord</a>
-        <a class="btn alt" href="#apropos">En savoir plus</a>
+
+        <div class="cta">
+          <a class="btn btn-discord" href="https://discord.gg/QXBsK5zw" target="_blank" rel="noopener">Rejoindre Discord</a>
+          <a class="btn alt" href="#apropos">En savoir plus</a>
+        </div>
 
         <div class="pillars">
           <div class="pillar"><i><svg viewBox="0 0 24 24"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5M14 4l-4 16"/></svg></i>Apprendre en pratique</div>
@@ -120,7 +123,9 @@
         <div class="nets">
           <a class="net" href="https://www.linkedin.com/company/akieniacademy/" target="_blank" rel="noopener"><span class="ico in">in</span><b>LinkedIn</b><small>Akieni Academy</small></a>
           <a class="net" href="https://github.com/akieni-academy-c2" target="_blank" rel="noopener"><span class="ico gh">GH</span><b>GitHub</b><small>Akieni Academy</small></a>
-         
+          <a class="net" href="#" target="_blank" rel="noopener"><span class="ico x">X</span><b>X (Twitter)</b><small>@AkieniDev</small></a>
+          <a class="net" href="#" target="_blank" rel="noopener"><span class="ico ig">IG</span><b>Instagram</b><small>@akieni.dev</small></a>
+          <a class="net" href="#" target="_blank" rel="noopener"><span class="ico yt">▶</span><b>YouTube</b><small>@Akieni Dev</small></a>
           <a class="net" href="https://discord.gg/QXBsK5zw" target="_blank" rel="noopener"><span class="ico dc">D</span><b>Discord</b><small>Akieni Dev</small></a>
         </div>
       </div>
@@ -134,6 +139,33 @@
     <div class="slogan">CODE · APPRENDS · ÉVOLUE</div>
   </div>
 </footer>
+
+<script>
+  (function () {
+    var btn = document.querySelector('.btn-discord');
+    if (!btn) return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    var INTERVAL = 4000;   
+    var paused = false;
+
+    function play() {
+      if (paused || document.hidden) return;
+      btn.classList.remove('animate');
+      void btn.offsetWidth;            
+      btn.classList.add('animate');
+    }
+
+    btn.addEventListener('animationend', function (e) {
+      if (e.animationName === 'discord-jump') btn.classList.remove('animate');
+    });
+    btn.addEventListener('mouseenter', function () { paused = true; });
+    btn.addEventListener('mouseleave', function () { paused = false; });
+
+    setTimeout(play, 1000);            
+    setInterval(play, INTERVAL);
+  })();
+</script>
 
 </body>
 </html>
