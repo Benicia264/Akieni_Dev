@@ -112,7 +112,7 @@ Palette utilisée :
    git add .
    git commit -m "Premier commit : site Akieni Dev"
    git branch -M main
-   git remote add origin https://github.com/TON-ORGANISATION/TON-DEPOT.git
+   git remote add origin https://github.com/Benicia264/Akieni_Dev.git
    git push -u origin main
    ```
 3. Sur GitHub : **Settings → Pages**.
