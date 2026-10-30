@@ -68,7 +68,7 @@ Aucune installation n'est nécessaire.
 
 ```bash
 # 1. Cloner le dépôt
-git clone https://github.com/TON-ORGANISATION/TON-DEPOT.git
+git clone https://github.com/Benicia264/Akieni_Dev.git
 
 # 2. Entrer dans le dossier
 cd TON-DEPOT
